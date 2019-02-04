@@ -1,20 +1,23 @@
 package com.getknowledge.jwt.config;
 
-import com.devglan.model.User;
-import io.jsonwebtoken.Claims;
-import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.SignatureAlgorithm;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.stereotype.Component;
 
 import java.io.Serializable;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.function.Function;
 
-import static com.devglan.model.Constants.ACCESS_TOKEN_VALIDITY_SECONDS;
-import static com.devglan.model.Constants.SIGNING_KEY;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.stereotype.Component;
+
+import com.getknowledge.jwt.model.User;
+
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.SignatureAlgorithm;
+
+import static com.getknowledge.jwt.model.Constants.ACCESS_TOKEN_VALIDITY_SECONDS;
+import static com.getknowledge.jwt.model.Constants.SIGNING_KEY;
 
 @Component
 public class JwtTokenUtil implements Serializable {
